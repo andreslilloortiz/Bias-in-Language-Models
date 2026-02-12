@@ -1,0 +1,42 @@
+import pandas as pd # type: ignore
+
+FEMALE_WORDS = {} #TODO
+MALE_WORDS = {} #TODO
+
+def RQ1_2210_15144v2(filler, diagnoses, templates):
+
+    results = []
+
+    for phase, template in templates.items():
+        for diag in diagnoses:
+
+            prompt = template.replace("[diagnosis]", diag).replace("<mask >", filler.tokenizer.mask_token)
+
+            predictions = filler(prompt, top_k = 50)
+
+            metrics = {
+                "phase": phase,
+                "diagnosis": diag,
+                "p_female": 0.0,
+                "p_male": 0.0,
+                "tokens_female": [],
+                "tokens_male": []
+            }
+
+            for pred in predictions:
+                score = pred['score']
+                token = pred['token_str'].strip().lower()
+
+                if score < 0.01:
+                    continue
+
+                if token in FEMALE_WORDS:
+                    metrics["p_female"] += score
+                    metrics["tokens_female"].append(f"{token} ({score:.4f})")
+                elif token in MALE_WORDS:
+                    metrics["p_male"] += score
+                    metrics["tokens_male"].append(f"{token} ({score:.4f})")
+
+            results.append(metrics)
+
+    return pd.DataFrame(results)
