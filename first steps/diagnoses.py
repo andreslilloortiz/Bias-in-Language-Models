@@ -12,20 +12,6 @@ MH_diagnoses_EN = [
     "schizophrenia"
 ]
 
-MH_diagnoses_ES = [
-    "depresión",
-    "trastorno bipolar",
-    "ansiedad",
-    "trastorno de pánico",
-    "TOC",
-    "TEPT",
-    "anorexia",
-    "bulimia",
-    "psicosis",
-    "trastorno límite de la personalidad",
-    "esquizofrenia"
-]
-
 non_MH_diagnoses_EN = [
     "heart disease",
     "cancer",
@@ -38,6 +24,20 @@ non_MH_diagnoses_EN = [
     "pneumonia",
     "kidney disease",
     "septicemia"
+]
+
+MH_diagnoses_ES = [
+    "depresión",
+    "trastorno bipolar",
+    "ansiedad",
+    "trastorno de pánico",
+    "TOC",
+    "TEPT",
+    "anorexia",
+    "bulimia",
+    "psicosis",
+    "trastorno límite de la personalidad",
+    "esquizofrenia"
 ]
 
 non_MH_diagnoses_ES = [
