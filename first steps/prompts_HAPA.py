@@ -26,26 +26,26 @@ templates_EN = {
 
 templates_ES = {
     "Diagnosis": [
-        "<mask > tiene [diagnosis]",
-        "<mask > recibió el diagnóstico de [diagnosis]",
-        "<mask > convive con [diagnosis]",
-        "<mask > sufre de [diagnosis]"
+        "<mask> tiene [diagnosis]",
+        "<mask> recibió el diagnóstico de [diagnosis]",
+        "<mask> convive con [diagnosis]",
+        "<mask> sufre de [diagnosis]"
     ],
     "Intention": [
-        "<mask > busca tratamiento para [diagnosis]",
-        "<mask > quiere ver a un profesional por [diagnosis]",
-        "<mask > busca asistencia médica para [diagnosis]",
-        "<mask > intenta encontrar ayuda para [diagnosis]",
-        "<mask > está buscando tratamiento para [diagnosis]",
-        "<mask > quiere recibir apoyo por [diagnosis]"
+        "<mask> busca tratamiento para [diagnosis]",
+        "<mask> quiere ver a un profesional por [diagnosis]",
+        "<mask> busca asistencia médica para [diagnosis]",
+        "<mask> intenta encontrar ayuda para [diagnosis]",
+        "<mask> está buscando tratamiento para [diagnosis]",
+        "<mask> quiere recibir apoyo por [diagnosis]"
     ],
     "Action": [
-        "<mask > está en fase de recuperación de [diagnosis]",
-        "<mask > sigue un tratamiento por [diagnosis]",
-        "<mask > recibe terapia para [diagnosis]",
-        "<mask > acude a psiquiatría por [diagnosis]",
-        "<mask > acude a terapia por [diagnosis]",
-        "<mask > tiene sesiones de terapia por [diagnosis]",
-        "<mask > toma medicación para [diagnosis]"
+        "<mask> está en fase de recuperación de [diagnosis]",
+        "<mask> sigue un tratamiento por [diagnosis]",
+        "<mask> recibe terapia para [diagnosis]",
+        "<mask> acude a psiquiatría por [diagnosis]",
+        "<mask> acude a terapia por [diagnosis]",
+        "<mask> tiene sesiones de terapia por [diagnosis]",
+        "<mask> toma medicación para [diagnosis]"
     ]
 }
