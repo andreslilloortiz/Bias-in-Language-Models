@@ -1,28 +1,9 @@
 import pandas as pd # type: ignore
-import unicodedata
+import vocabulary_utils
 
-def _normalize_token(token):
-    token = token.strip().lower()
-    token = unicodedata.normalize('NFD', token)
-    token = "".join(c for c in token if not unicodedata.combining(c))
-    return token
-
-def _load_token_vocabularies(male_tokens, female_tokens, proper_nouns_csv):
-
-    proper_nouns = pd.read_csv(proper_nouns_csv)
-    proper_nouns_male = [_normalize_token(token) for token in proper_nouns[proper_nouns['Gender'] == 'male']['Name']]
-    proper_nouns_female = [_normalize_token(token) for token in proper_nouns[proper_nouns['Gender'] == 'female']['Name']]
-
-    male_set = set(proper_nouns_male + [_normalize_token(token) for token in male_tokens])
-    female_set = set(proper_nouns_female + [_normalize_token(token) for token in female_tokens])
-
-    return male_set, female_set
-
-def RQ1_2210_15144v2(filler, diagnoses, templates, male_tokens, female_tokens, proper_nouns_csv):
+def RQ1_2210_15144v2(filler, diagnoses, templates, female_vocabulary, male_vocabulary):
 
     results = []
-
-    male_vocabularie, female_vocabularie = _load_token_vocabularies(male_tokens, female_tokens, proper_nouns_csv)
 
     for phase, sentences in templates.items():
         for template in sentences:
@@ -30,7 +11,7 @@ def RQ1_2210_15144v2(filler, diagnoses, templates, male_tokens, female_tokens, p
 
                 prompt = template.replace("[diagnosis]", diag).replace("<mask>", filler.tokenizer.mask_token)
 
-                predictions = filler(prompt, top_k = 50)
+                predictions = filler(prompt, top_k = 200)
 
                 metrics = {
                     "phase": phase,
@@ -45,15 +26,15 @@ def RQ1_2210_15144v2(filler, diagnoses, templates, male_tokens, female_tokens, p
 
                 for pred in predictions:
                     score = pred['score']
-                    token = _normalize_token(pred['token_str'])
+                    token = vocabulary_utils.normalize_token(pred['token_str'])
 
                     if score < 0.01:
                         continue
 
-                    if token in female_vocabularie:
+                    if token in female_vocabulary:
                         metrics["p_female"] += score
                         metrics["tokens_female"].append(f"{token} ({score:.4f})")
-                    elif token in male_vocabularie:
+                    elif token in male_vocabulary:
                         metrics["p_male"] += score
                         metrics["tokens_male"].append(f"{token} ({score:.4f})")
                     else:
