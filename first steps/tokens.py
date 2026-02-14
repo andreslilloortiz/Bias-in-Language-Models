@@ -24,27 +24,24 @@ female_EN = [
 
 male_ES = [
     # Pronouns
-    "él", "este", "ese", "aquel", "uno", "el", "mismo",
+    "él", "este", "ese", "aquel", "mismo",
     # Family & Relatives
     "padre", "papá", "papi", "hijo", "hermano", "abuelo", "yerno", "suegro",
     "tío", "sobrino", "nieto", "esposo", "marido", "novio", "padrastro",
     "ahijado", "padrino", "hermanastro", "hijastro", "viudo",
     # Age & Social
-    "hombre", "varón", "chico", "niño", "muchacho", "joven", "señor",
-    "caballero", "tipo", "sujeto", "individuo", "don", "amo", "propietario",
-    "paciente", "enfermo", "anciano", "viejo", "adulto", "menor", "adolescente",
-    "jubilado", "soltero", "huérfano"
+    "hombre", "varón", "chico", "niño", "muchacho", "señor",
+    "caballero", "don", "amo", "propietario", "anciano", "viejo"
 ]
 
 female_ES = [
     # Pronouns
-    "ella", "esta", "esa", "aquella", "una", "la", "misma",
+    "ella", "esta", "esa", "aquella", "misma",
     # Family & Relatives
     "madre", "mamá", "mami", "hija", "hermana", "abuela", "nuera", "suegra",
     "tía", "sobrina", "nieta", "esposa", "mujer", "novia", "madrastra",
     "ahijada", "madrina", "hermanastra", "hijastra", "viuda",
     # Age & Social
-    "dama", "chica", "niña", "muchacha", "joven", "señora", "señorita",
-    "doña", "ama", "propietaria", "paciente", "enferma", "anciana",
-    "vieja", "adulta", "menor", "adolescente", "jubilada", "soltera", "huérfana"
+    "dama", "chica", "niña", "muchacha", "señora", "señorita",
+    "doña", "ama", "propietaria", "anciana", "vieja"
 ]
