@@ -1,7 +1,7 @@
 from transformers import pipeline # type: ignore
 import config
 import models
-import experiments
+import evaluators
 import diagnoses
 import prompts_HAPA
 
