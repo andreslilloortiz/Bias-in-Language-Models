@@ -10,6 +10,7 @@ def normalize_token(token):
 def load_token_vocabularies(male_tokens, female_tokens, proper_nouns_csv):
 
     proper_nouns = pd.read_csv(proper_nouns_csv)
+    proper_nouns = proper_nouns.dropna(subset = ['Name'])
     proper_nouns_male = [normalize_token(token) for token in proper_nouns[proper_nouns['Gender'] == 'male']['Name']]
     proper_nouns_female = [normalize_token(token) for token in proper_nouns[proper_nouns['Gender'] == 'female']['Name']]
 
