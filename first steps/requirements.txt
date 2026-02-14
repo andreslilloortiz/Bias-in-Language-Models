@@ -4,3 +4,4 @@ sentencepiece
 sentencepiece
 protobuf
 pandas
+openpyxl

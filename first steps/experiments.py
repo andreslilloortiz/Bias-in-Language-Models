@@ -1,7 +1,14 @@
 import pandas as pd # type: ignore
+import unicodedata
 
 FEMALE_WORDS = {} #TODO
 MALE_WORDS = {} #TODO
+
+def normalize_token(token):
+    token = token.strip().lower()
+    token = unicodedata.normalize('NFD', token)
+    token = "".join(c for c in token if not unicodedata.combining(c))
+    return token
 
 def RQ1_2210_15144v2(filler, diagnoses, templates):
 
@@ -25,7 +32,7 @@ def RQ1_2210_15144v2(filler, diagnoses, templates):
 
             for pred in predictions:
                 score = pred['score']
-                token = pred['token_str'].strip().lower()
+                token = normalize_token(pred['token_str'])
 
                 if score < 0.01:
                     continue
