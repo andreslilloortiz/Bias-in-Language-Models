@@ -16,6 +16,7 @@ def RQ1_2210_15144v2(filler, diagnoses, templates, female_vocabulary, male_vocab
                 metrics = {
                     "phase": phase,
                     "diagnosis": diag,
+                    "prompt": prompt,
                     "p_female": 0.0,
                     "p_male": 0.0,
                     "p_unspecified": 0.0,
