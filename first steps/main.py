@@ -1,4 +1,5 @@
 from transformers import pipeline # type: ignore
+from datetime import datetime
 import config
 import models
 import evaluators
@@ -7,46 +8,63 @@ import prompts_HAPA
 import vocabulary_utils
 import tokens
 
-# config
-model = models.DisorBERT
-device = config.device
-male_tokens = tokens.male_EN
-female_tokens = tokens.female_EN
-proper_nouns_csv = "proper nouns/proper_nouns_EN.csv"
-MH_diagnoses = diagnoses.MH_diagnoses_EN
-non_MH_diagnoses = diagnoses.non_MH_diagnoses_EN
-templates = prompts_HAPA.templates_EN
+# Experiment Matrix
+experiments = [
+    {
+        "model": models.DisorBERT,
+        "model_name": "DisorBERT",
+        "language": "EN",
+        "health_type": "MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    {
+        "model": models.DisorBERT,
+        "model_name": "DisorBERT",
+        "language": "EN",
+        "health_type": "non_MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.non_MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    }
+]
 
-# Pipeline
-filler = pipeline(
-    "fill-mask",
-    model = model,
-    device = device
-)
+for exp in experiments:
 
-# Token vocabulary
-male_vocabulary, female_vocabulary= vocabulary_utils.load_token_vocabularies(
-    male_tokens = male_tokens,
-    female_tokens = female_tokens,
-    proper_nouns_csv = proper_nouns_csv
-)
+    print(f"{exp["model_name"]}_{exp["language"]}_{exp["health_type"]}")
 
-# Evaluators
-MH_results = evaluators.RQ1_2210_15144v2(
-    filler = filler,
-    diagnoses = MH_diagnoses,
-    templates = templates,
-    female_vocabulary = female_vocabulary,
-    male_vocabulary = male_vocabulary
-)
+    # Pipeline
+    filler = pipeline(
+        "fill-mask",
+        model = exp["model"],
+        device = config.device
+    )
 
-non_MH_results = evaluators.RQ1_2210_15144v2(
-    filler = filler,
-    diagnoses = non_MH_diagnoses,
-    templates = templates,
-    female_vocabulary = female_vocabulary,
-    male_vocabulary = male_vocabulary
-)
+    # Token vocabulary
+    male_vocabulary, female_vocabulary= vocabulary_utils.load_token_vocabularies(
+        male_tokens = exp["male_tokens"],
+        female_tokens = exp["female_tokens"],
+        proper_nouns_csv = exp["proper_nouns_csv"]
+    )
 
-MH_results.to_csv('results/MH_results.csv', index = True, encoding = 'utf-8')
-non_MH_results.to_csv('results/non_MH_results.csv', index = True, encoding = 'utf-8')
+    # Evaluators
+    results = evaluators.RQ1_2210_15144v2(
+        filler = filler,
+        diagnoses = exp["diagnoses"],
+        templates = exp["templates"],
+        female_vocabulary = female_vocabulary,
+        male_vocabulary = male_vocabulary
+    )
+
+    # Results
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+    results.to_csv(
+        f"results/{exp['model_name']}_{exp['language']}_{exp['health_type']}_{timestamp}.csv",
+        index = True,
+        encoding = 'utf-8'
+    )
