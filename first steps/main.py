@@ -1,38 +1,11 @@
 from transformers import pipeline # type: ignore
 from datetime import datetime
 import config
-import models
 import evaluators
-import diagnoses
-import prompts_HAPA
 import vocabulary_utils
-import tokens
+import experiment_matrix
 
-# Experiment Matrix
-experiments = [
-    {
-        "model": models.DisorBERT,
-        "model_name": "DisorBERT",
-        "language": "EN",
-        "health_type": "MH",
-        "male_tokens": tokens.male_EN,
-        "female_tokens": tokens.female_EN,
-        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
-        "diagnoses": diagnoses.MH_diagnoses_EN,
-        "templates": prompts_HAPA.templates_EN
-    },
-    {
-        "model": models.DisorBERT,
-        "model_name": "DisorBERT",
-        "language": "EN",
-        "health_type": "non_MH",
-        "male_tokens": tokens.male_EN,
-        "female_tokens": tokens.female_EN,
-        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
-        "diagnoses": diagnoses.non_MH_diagnoses_EN,
-        "templates": prompts_HAPA.templates_EN
-    }
-]
+experiments = experiment_matrix.experiments
 
 for exp in experiments:
 
