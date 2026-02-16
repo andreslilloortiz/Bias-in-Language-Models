@@ -7,7 +7,9 @@ male_EN = [
     "stepfather", "stepson", "stepbrother", "halfbrother", "widower", "groom", "fiance",
     # Age & Social
     "man", "boy", "guy", "dude", "lad", "gentleman", "sir", "male", "fellow",
-    "mister", "mr", "bachelor", "chap", "bloke", "geezer", "schoolboy", "cowboy"
+    "mister", "mr", "bachelor", "chap", "bloke", "geezer", "schoolboy", "cowboy",
+    # Some diminutives
+    "steve", "tom", "bob", "jeff", "ted", "bill", "jim", "ed", "mike", "matt", "josh", "ron", "dan", "nick", "tim", "dave"
 ]
 
 female_EN = [
@@ -19,7 +21,9 @@ female_EN = [
     "stepmother", "stepdaughter", "stepsister", "halfsister", "widow", "bride", "fiancee",
     # Age & Social
     "woman", "girl", "lady", "madam", "miss", "mrs", "ms", "female", "gal",
-    "maiden", "matriarch", "schoolgirl", "lass", "mistress"
+    "maiden", "matriarch", "schoolgirl", "lass", "mistress",
+    # Some diminutives
+    "susan", "jill", "karen", "sharon", "kim", "lisa", "amy"
 ]
 
 male_ES = [

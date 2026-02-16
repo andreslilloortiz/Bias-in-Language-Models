@@ -19,7 +19,7 @@ for exp in experiments:
     )
 
     # Token vocabulary
-    male_vocabulary, female_vocabulary= vocabulary_utils.load_token_vocabularies(
+    male_vocabulary, female_vocabulary = vocabulary_utils.load_token_vocabularies(
         male_tokens = exp["male_tokens"],
         female_tokens = exp["female_tokens"],
         proper_nouns_csv = exp["proper_nouns_csv"]
