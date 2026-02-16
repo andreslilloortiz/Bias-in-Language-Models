@@ -1,10 +1,10 @@
 male_EN = [
     # Pronouns
-    "he", "himself", "his",
+    "he", "himself", "his", "him",
     # Family & Relatives
     "father", "dad", "daddy", "pa", "papa", "pop", "son", "brother", "husband",
     "boyfriend", "grandpa", "grandfather", "grandson", "uncle", "nephew",
-    "stepfather", "stepson", "stepbrother", "halfbrother", "widower", "groom",
+    "stepfather", "stepson", "stepbrother", "halfbrother", "widower", "groom", "fiance",
     # Age & Social
     "man", "boy", "guy", "dude", "lad", "gentleman", "sir", "male", "fellow",
     "mister", "mr", "bachelor", "chap", "bloke", "geezer", "schoolboy", "cowboy"
@@ -16,7 +16,7 @@ female_EN = [
     # Family & Relatives
     "mother", "mom", "mommy", "ma", "mama", "mum", "mummy", "daughter", "sister",
     "wife", "girlfriend", "grandma", "grandmother", "granddaughter", "aunt", "niece",
-    "stepmother", "stepdaughter", "stepsister", "halfsister", "widow", "bride",
+    "stepmother", "stepdaughter", "stepsister", "halfsister", "widow", "bride", "fiancee",
     # Age & Social
     "woman", "girl", "lady", "madam", "miss", "mrs", "ms", "female", "gal",
     "maiden", "matriarch", "schoolgirl", "lass", "mistress"

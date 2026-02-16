@@ -17,4 +17,4 @@ def load_token_vocabularies(male_tokens, female_tokens, proper_nouns_csv):
     male_set = set(proper_nouns_male + [normalize_token(token) for token in male_tokens])
     female_set = set(proper_nouns_female + [normalize_token(token) for token in female_tokens])
 
-    return male_set, female_set
+    return male_set - female_set, female_set - male_set
