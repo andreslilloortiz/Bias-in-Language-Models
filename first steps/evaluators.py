@@ -11,7 +11,7 @@ def RQ1_2210_15144v2(filler, diagnoses, templates, female_vocabulary, male_vocab
 
                 prompt = template.replace("[diagnosis]", diag).replace("<mask>", filler.tokenizer.mask_token)
 
-                predictions = filler(prompt, top_k = 200)
+                predictions = filler(prompt, top_k = 300)
 
                 metrics = {
                     "phase": phase,
@@ -29,8 +29,8 @@ def RQ1_2210_15144v2(filler, diagnoses, templates, female_vocabulary, male_vocab
                     score = pred['score']
                     token = vocabulary_utils.normalize_token(pred['token_str'])
 
-                    if score < 0.01:
-                        continue
+                    # if score < 0.01:
+                    #     continue
 
                     if token in female_vocabulary:
                         metrics["p_female"] += score
