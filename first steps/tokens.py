@@ -9,7 +9,8 @@ male_EN = [
     "man", "boy", "guy", "dude", "lad", "gentleman", "sir", "male", "fellow",
     "mister", "mr", "bachelor", "chap", "bloke", "geezer", "schoolboy", "cowboy",
     # Some diminutives
-    "steve", "tom", "bob", "jeff", "ted", "bill", "jim", "ed", "mike", "matt", "josh", "ron", "dan", "nick", "tim", "dave"
+    "steve", "tom", "bob", "jeff", "ted", "bill", "jim", "ed", "mike", "matt", "josh", "ron", "dan", "nick", "tim", "dave",
+    "craig", "todd", "greg", "rick", "scott", "kevin"
 ]
 
 female_EN = [
