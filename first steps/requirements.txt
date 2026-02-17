@@ -5,3 +5,6 @@ sentencepiece
 protobuf
 pandas
 openpyxl
+ipykernel
+matplotlib
+seaborn
