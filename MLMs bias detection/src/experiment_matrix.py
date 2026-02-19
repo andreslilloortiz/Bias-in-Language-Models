@@ -12,7 +12,7 @@ experiments = [
         "health_type": "MH",
         "male_tokens": tokens.male_EN,
         "female_tokens": tokens.female_EN,
-        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
         "diagnoses": diagnoses.MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     },
@@ -24,7 +24,7 @@ experiments = [
         "health_type": "non_MH",
         "male_tokens": tokens.male_EN,
         "female_tokens": tokens.female_EN,
-        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
         "diagnoses": diagnoses.non_MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     },
@@ -36,7 +36,7 @@ experiments = [
         "health_type": "MH",
         "male_tokens": tokens.male_EN,
         "female_tokens": tokens.female_EN,
-        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
         "diagnoses": diagnoses.MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     },
@@ -48,7 +48,7 @@ experiments = [
         "health_type": "non_MH",
         "male_tokens": tokens.male_EN,
         "female_tokens": tokens.female_EN,
-        "proper_nouns_csv": "proper nouns/proper_nouns_EN.csv",
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
         "diagnoses": diagnoses.non_MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     }

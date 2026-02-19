@@ -37,7 +37,7 @@ for exp in experiments:
     # Results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     results.to_csv(
-        f"results/{exp['model_name']}_{exp['language']}_{exp['health_type']}_{timestamp}.csv",
+        f"../results/{exp['model_name']}_{exp['language']}_{exp['health_type']}_{timestamp}.csv",
         index = True,
         encoding = 'utf-8'
     )
