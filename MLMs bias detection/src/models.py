@@ -1,2 +1,7 @@
-DisorBERT = "citiusLTL/DisorBERT"
 BERT_base = "google-bert/bert-base-uncased"
+DisorBERT = "citiusLTL/DisorBERT"
+DepBERT = "citiusLTL/DepBERT"
+SHBERT = "citiusLTL/SHBERT"
+GambBERT = "citiusLTL/GambBERT"
+AnorBERT = "citiusLTL/AnorBERT"
+WholeBERT = "citiusLTL/WholeBERT"

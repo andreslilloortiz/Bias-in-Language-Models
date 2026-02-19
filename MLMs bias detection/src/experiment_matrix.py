@@ -4,6 +4,30 @@ import prompts_HAPA
 import tokens
 
 experiments = [
+    # BERT_base, EN, MH
+    {
+        "model": models.BERT_base,
+        "model_name": "BERT_base",
+        "language": "EN",
+        "health_type": "MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # BERT_base, EN, non_MH
+    {
+        "model": models.BERT_base,
+        "model_name": "BERT_base",
+        "language": "EN",
+        "health_type": "non_MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.non_MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
     # DisorBERT, EN, MH
     {
         "model": models.DisorBERT,
@@ -28,10 +52,10 @@ experiments = [
         "diagnoses": diagnoses.non_MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     },
-    # BERT_base, EN, MH
+    # DepBERT, EN, MH
     {
-        "model": models.BERT_base,
-        "model_name": "BERT_base",
+        "model": models.DepBERT,
+        "model_name": "DepBERT",
         "language": "EN",
         "health_type": "MH",
         "male_tokens": tokens.male_EN,
@@ -40,10 +64,106 @@ experiments = [
         "diagnoses": diagnoses.MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     },
-    # BERT_base, EN, non_MH
+    # DepBERT, EN, non_MH
     {
-        "model": models.BERT_base,
-        "model_name": "BERT_base",
+        "model": models.DepBERT,
+        "model_name": "DepBERT",
+        "language": "EN",
+        "health_type": "non_MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.non_MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # SHBERT, EN, MH
+    {
+        "model": models.SHBERT,
+        "model_name": "SHBERT",
+        "language": "EN",
+        "health_type": "MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # SHBERT, EN, non_MH
+    {
+        "model": models.SHBERT,
+        "model_name": "SHBERT",
+        "language": "EN",
+        "health_type": "non_MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.non_MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # GambBERT, EN, MH
+    {
+        "model": models.GambBERT,
+        "model_name": "GambBERT",
+        "language": "EN",
+        "health_type": "MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # GambBERT, EN, non_MH
+    {
+        "model": models.GambBERT,
+        "model_name": "GambBERT",
+        "language": "EN",
+        "health_type": "non_MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.non_MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # AnorBERT, EN, MH
+    {
+        "model": models.AnorBERT,
+        "model_name": "AnorBERT",
+        "language": "EN",
+        "health_type": "MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # AnorBERT, EN, non_MH
+    {
+        "model": models.AnorBERT,
+        "model_name": "AnorBERT",
+        "language": "EN",
+        "health_type": "non_MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.non_MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # WholeBERT, EN, MH
+    {
+        "model": models.WholeBERT,
+        "model_name": "WholeBERT",
+        "language": "EN",
+        "health_type": "MH",
+        "male_tokens": tokens.male_EN,
+        "female_tokens": tokens.female_EN,
+        "proper_nouns_csv": "../proper nouns/proper_nouns_EN.csv",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # WholeBERT, EN, non_MH
+    {
+        "model": models.WholeBERT,
+        "model_name": "WholeBERT",
         "language": "EN",
         "health_type": "non_MH",
         "male_tokens": tokens.male_EN,
