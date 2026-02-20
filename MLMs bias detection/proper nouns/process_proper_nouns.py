@@ -1,16 +1,16 @@
 import pandas as pd # type: ignore
 
-def process_nombres_por_edad_media():
+def process_nombres_por_edad_media(limit = 2000):
 
     # male
-    males_read = pd.read_excel('nombres_por_edad_media.xlsx', sheet_name = "Hombres", skiprows = 6)
+    males_read = pd.read_excel('nombres_por_edad_media.xlsx', sheet_name = "Hombres", skiprows = 6, nrows = limit)
     males_filtered = pd.DataFrame({
         'Name': males_read['Nombre'],
         'Gender': 'male'
     })
 
     # female
-    females_read = pd.read_excel('nombres_por_edad_media.xlsx', sheet_name = "Mujeres", skiprows = 6)
+    females_read = pd.read_excel('nombres_por_edad_media.xlsx', sheet_name = "Mujeres", skiprows = 6, nrows = limit)
     females_filtered = pd.DataFrame({
         'Name': females_read['Nombre'],
         'Gender': 'female'

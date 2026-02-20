@@ -4,8 +4,9 @@ import config
 import evaluators
 import vocabulary_utils
 import BERT_matrix
+import BETO_matrix
 
-experiments = BERT_matrix.experiments
+experiments = BERT_matrix.experiments + BETO_matrix.experiments
 
 for exp in experiments:
 

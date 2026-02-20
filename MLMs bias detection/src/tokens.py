@@ -29,24 +29,25 @@ female_EN = [
 
 male_ES = [
     # Pronouns
-    "él", "este", "ese", "aquel", "mismo",
+    "él", "este", "ese", "aquel", "mismo", "nosotros", "ellos",
     # Family & Relatives
     "padre", "papá", "papi", "hijo", "hermano", "abuelo", "yerno", "suegro",
     "tío", "sobrino", "nieto", "esposo", "marido", "novio", "padrastro",
     "ahijado", "padrino", "hermanastro", "hijastro", "viudo",
     # Age & Social
     "hombre", "varón", "chico", "niño", "muchacho", "señor",
-    "caballero", "don", "amo", "propietario", "anciano", "viejo"
+    "caballero", "don", "amo", "propietario", "anciano", "viejo",
+    "doctor", "médico"
 ]
 
 female_ES = [
     # Pronouns
-    "ella", "esta", "esa", "aquella", "misma",
+    "ella", "esta", "esa", "aquella", "misma", "ellas", "nosotras",
     # Family & Relatives
     "madre", "mamá", "mami", "hija", "hermana", "abuela", "nuera", "suegra",
     "tía", "sobrina", "nieta", "esposa", "mujer", "novia", "madrastra",
     "ahijada", "madrina", "hermanastra", "hijastra", "viuda",
     # Age & Social
     "dama", "chica", "niña", "muchacha", "señora", "señorita",
-    "doña", "ama", "propietaria", "anciana", "vieja"
+    "doña", "ama", "propietaria", "anciana", "vieja", "médica", "doctora"
 ]
