@@ -3,9 +3,9 @@ from datetime import datetime
 import config
 import evaluators
 import vocabulary_utils
-import experiment_matrix
+import BERT_matrix
 
-experiments = experiment_matrix.experiments
+experiments = BERT_matrix.experiments
 
 for exp in experiments:
 
@@ -35,9 +35,8 @@ for exp in experiments:
     )
 
     # Results
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     results.to_csv(
-        f"../results/{exp['model_name']}_{exp['language']}_{exp['health_type']}_{timestamp}.csv",
+        f"../results/{exp['model_name']}_{exp['language']}_{exp['health_type']}.csv",
         index = True,
         encoding = 'utf-8'
     )

@@ -1,4 +1,4 @@
-import models
+import BERT_models
 import diagnoses
 import prompts_HAPA
 import tokens
@@ -6,7 +6,7 @@ import tokens
 experiments = [
     # BERT_base, EN, MH
     {
-        "model": models.BERT_base,
+        "model": BERT_models.BERT_base,
         "model_name": "BERT_base",
         "language": "EN",
         "health_type": "MH",
@@ -18,7 +18,7 @@ experiments = [
     },
     # BERT_base, EN, non_MH
     {
-        "model": models.BERT_base,
+        "model": BERT_models.BERT_base,
         "model_name": "BERT_base",
         "language": "EN",
         "health_type": "non_MH",
@@ -30,7 +30,7 @@ experiments = [
     },
     # DisorBERT, EN, MH
     {
-        "model": models.DisorBERT,
+        "model": BERT_models.DisorBERT,
         "model_name": "DisorBERT",
         "language": "EN",
         "health_type": "MH",
@@ -42,7 +42,7 @@ experiments = [
     },
     # DisorBERT, EN, non_MH
     {
-        "model": models.DisorBERT,
+        "model": BERT_models.DisorBERT,
         "model_name": "DisorBERT",
         "language": "EN",
         "health_type": "non_MH",
@@ -54,7 +54,7 @@ experiments = [
     },
     # DepBERT, EN, MH
     {
-        "model": models.DepBERT,
+        "model": BERT_models.DepBERT,
         "model_name": "DepBERT",
         "language": "EN",
         "health_type": "MH",
@@ -66,7 +66,7 @@ experiments = [
     },
     # DepBERT, EN, non_MH
     {
-        "model": models.DepBERT,
+        "model": BERT_models.DepBERT,
         "model_name": "DepBERT",
         "language": "EN",
         "health_type": "non_MH",
@@ -78,7 +78,7 @@ experiments = [
     },
     # SHBERT, EN, MH
     {
-        "model": models.SHBERT,
+        "model": BERT_models.SHBERT,
         "model_name": "SHBERT",
         "language": "EN",
         "health_type": "MH",
@@ -90,7 +90,7 @@ experiments = [
     },
     # SHBERT, EN, non_MH
     {
-        "model": models.SHBERT,
+        "model": BERT_models.SHBERT,
         "model_name": "SHBERT",
         "language": "EN",
         "health_type": "non_MH",
@@ -102,7 +102,7 @@ experiments = [
     },
     # GambBERT, EN, MH
     {
-        "model": models.GambBERT,
+        "model": BERT_models.GambBERT,
         "model_name": "GambBERT",
         "language": "EN",
         "health_type": "MH",
@@ -114,7 +114,7 @@ experiments = [
     },
     # GambBERT, EN, non_MH
     {
-        "model": models.GambBERT,
+        "model": BERT_models.GambBERT,
         "model_name": "GambBERT",
         "language": "EN",
         "health_type": "non_MH",
@@ -126,7 +126,7 @@ experiments = [
     },
     # AnorBERT, EN, MH
     {
-        "model": models.AnorBERT,
+        "model": BERT_models.AnorBERT,
         "model_name": "AnorBERT",
         "language": "EN",
         "health_type": "MH",
@@ -138,7 +138,7 @@ experiments = [
     },
     # AnorBERT, EN, non_MH
     {
-        "model": models.AnorBERT,
+        "model": BERT_models.AnorBERT,
         "model_name": "AnorBERT",
         "language": "EN",
         "health_type": "non_MH",
@@ -150,7 +150,7 @@ experiments = [
     },
     # WholeBERT, EN, MH
     {
-        "model": models.WholeBERT,
+        "model": BERT_models.WholeBERT,
         "model_name": "WholeBERT",
         "language": "EN",
         "health_type": "MH",
@@ -162,7 +162,7 @@ experiments = [
     },
     # WholeBERT, EN, non_MH
     {
-        "model": models.WholeBERT,
+        "model": BERT_models.WholeBERT,
         "model_name": "WholeBERT",
         "language": "EN",
         "health_type": "non_MH",
