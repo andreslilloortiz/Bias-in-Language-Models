@@ -1,0 +1,6 @@
+RoBERTa_base = "FacebookAI/roberta-base"
+DisorRoBERTa = "citiusLTL/DisorRoBERTa"
+DepRoBERTa = "citiusLTL/DepRoBERTa"
+SHRoBERTa = "citiusLTL/SHRoBERTa"
+GambRoBERTa = "citiusLTL/GambRoBERTa"
+AnorRoBERTa = "citiusLTL/AnorRoBERTa"
