@@ -6,7 +6,7 @@ male_EN = [
     "boyfriend", "grandpa", "grandfather", "grandson", "uncle", "nephew",
     "stepfather", "stepson", "stepbrother", "halfbrother", "widower", "groom", "fiance",
     # Age & Social
-    "man", "boy", "guy", "dude", "lad", "gentleman", "sir", "male", "fellow",
+    "man", "men" "boy", "guy", "dude", "lad", "gentleman", "sir", "male", "fellow",
     "mister", "mr", "bachelor", "chap", "bloke", "geezer", "schoolboy", "cowboy",
     # Some diminutives
     "steve", "tom", "bob", "jeff", "ted", "bill", "jim", "ed", "mike", "matt", "josh", "ron", "dan", "nick", "tim", "dave",
@@ -21,7 +21,7 @@ female_EN = [
     "wife", "girlfriend", "grandma", "grandmother", "granddaughter", "aunt", "niece",
     "stepmother", "stepdaughter", "stepsister", "halfsister", "widow", "bride", "fiancee",
     # Age & Social
-    "woman", "girl", "lady", "madam", "miss", "mrs", "ms", "female", "gal",
+    "woman", "women" "girl", "lady", "madam", "miss", "mrs", "ms", "female", "gal",
     "maiden", "matriarch", "schoolgirl", "lass", "mistress",
     # Some diminutives
     "susan", "jill", "karen", "sharon", "kim", "lisa", "amy"
