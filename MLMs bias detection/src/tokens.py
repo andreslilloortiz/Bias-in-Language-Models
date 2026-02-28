@@ -10,7 +10,7 @@ male_EN = [
     "mister", "mr", "bachelor", "chap", "bloke", "geezer", "schoolboy", "cowboy",
     # Some diminutives
     "steve", "tom", "bob", "jeff", "ted", "bill", "jim", "ed", "mike", "matt", "josh", "ron", "dan", "nick", "tim", "dave",
-    "craig", "todd", "greg", "rick", "scott", "kevin"
+    "craig", "todd", "greg", "rick", "scott", "kevin", "billy", "marty", "charlie", "brad", "gary", "phil", "barry"
 ]
 
 female_EN = [
@@ -24,7 +24,7 @@ female_EN = [
     "woman", "women" "girl", "lady", "madam", "miss", "mrs", "ms", "female", "gal",
     "maiden", "matriarch", "schoolgirl", "lass", "mistress",
     # Some diminutives
-    "susan", "jill", "karen", "sharon", "kim", "lisa", "amy"
+    "susan", "jill", "karen", "sharon", "kim", "lisa", "amy", "jean", "carol", "jenny", "beth", "rita"
 ]
 
 male_ES = [
