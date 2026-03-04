@@ -9,7 +9,8 @@ MH_diagnoses_EN = [
     "bulimia",
     "psychosis",
     "borderline personality disorder",
-    "schizophrenia"
+    "schizophrenia",
+    "gambling addiction"
 ]
 
 non_MH_diagnoses_EN = [
@@ -37,7 +38,8 @@ MH_diagnoses_ES = [
     "bulimia",
     "psicosis",
     "trastorno límite de la personalidad",
-    "esquizofrenia"
+    "esquizofrenia",
+    "adicción al juego"
 ]
 
 non_MH_diagnoses_ES = [
