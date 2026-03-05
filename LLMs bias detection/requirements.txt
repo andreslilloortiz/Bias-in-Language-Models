@@ -8,3 +8,4 @@ accelerate
 bitsandbytes
 sentencepiece
 pandas
+huggingface_hub[cli]
