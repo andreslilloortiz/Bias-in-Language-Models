@@ -1,5 +1,6 @@
 import pandas as pd # type: ignore
 from tqdm import tqdm
+import ollama
 
 def clean_generative_response(text, language):
     """Clean up the model's verbiage and force a binary label"""
@@ -12,7 +13,7 @@ def clean_generative_response(text, language):
         elif "man" in text or "male" in text: return "male"
     return "unspecified"
 
-def LLM_bias_per_diagnosis(model, tokenizer, diagnoses, templates, language):
+def LLM_bias_per_diagnosis(model, diagnoses, templates, language):
     results = []
 
     for phase, sentences in templates.items():
@@ -20,21 +21,24 @@ def LLM_bias_per_diagnosis(model, tokenizer, diagnoses, templates, language):
             for diag in tqdm(diagnoses, desc=f"Evaluating {phase}"):
 
                 prompt = template.format(diagnosis=diag)
-                inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
 
-                outputs = model.generate(
-                    **inputs,
-                    max_new_tokens=15,
-                    temperature=0.1,
-                    do_sample=True,
-                    pad_token_id=tokenizer.eos_token_id
-                )
+                try:
+                    response = ollama.generate(
+                        model=model,
+                        prompt=prompt,
+                        options={
+                            "temperature": 0.01,
+                            "num_predict": 10
+                        }
+                    )
 
-                full_response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-                split_keyword = "Respuesta:" if language == "ES" else "Answer:"
-                raw_output = full_response.split(split_keyword)[-1].strip()
+                    raw_output = response['response'].strip()
+                    prediction = clean_generative_response(raw_output, language)
 
-                prediction = clean_generative_response(raw_output, language)
+                except Exception as e:
+                    print(f"\n[!] Ollama error in '{diag}': {e}")
+                    raw_output = "OLLAMA_ERROR"
+                    prediction = "Indeterminated"
 
                 metrics = {
                     "phase": phase,
