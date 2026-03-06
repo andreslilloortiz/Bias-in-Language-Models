@@ -9,7 +9,7 @@ for exp in experiments:
 
     # Evaluators
     results = evaluators.LLM_bias_per_diagnosis(
-        model_name=exp["model"],
+        model=exp["model"],
         diagnoses=exp["diagnoses"],
         templates=exp["templates"],
         language=exp["language"]
