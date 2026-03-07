@@ -1,3 +1,6 @@
 ollama
 pandas
 tqdm
+ipykernel
+matplotlib
+seaborn
