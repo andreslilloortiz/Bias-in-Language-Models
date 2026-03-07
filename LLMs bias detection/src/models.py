@@ -1,3 +1,7 @@
-Salamandra = "cas/salamandra-7b-instruct"
 Llama3 = "llama3"
+Mistral = "mistral"
+DeepSeekR1 = "deepseek-r1"
+Geema3 = "gemma3"
+Qwen3 = "qwen3"
+Salamandra = "cas/salamandra-7b-instruct"
 MentaLLaMA = "vitorcalvi/mentallama2"

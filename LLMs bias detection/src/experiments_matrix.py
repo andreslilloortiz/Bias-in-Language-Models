@@ -3,6 +3,24 @@ import diagnoses
 import prompts_HAPA
 
 experiments = [
+    # Llama3, EN, MH
+    {
+        "model": models.Llama3,
+        "model_name": "Llama3",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # Llama3, ES, MH
+    {
+        "model": models.Llama3,
+        "model_name": "Llama3",
+        "language": "ES",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_ES,
+        "templates": prompts_HAPA.templates_ES
+    },
     # Salamandra, ES, MH
     {
         "model": models.Salamandra,
@@ -12,10 +30,10 @@ experiments = [
         "diagnoses": diagnoses.MH_diagnoses_ES,
         "templates": prompts_HAPA.templates_ES
     },
-    # Llama3, EN, MH
+    # Salamandra, EN, MH
     {
-        "model": models.Llama3,
-        "model_name": "Llama3",
+        "model": models.Salamandra,
+        "model_name": "Salamandra",
         "language": "EN",
         "health_type": "MH",
         "diagnoses": diagnoses.MH_diagnoses_EN,
