@@ -3,24 +3,96 @@ import diagnoses
 import prompts_HAPA
 
 experiments = [
-    # Llama3, EN, MH
+    # Llama_3, EN, MH
     {
-        "model": models.Llama3,
-        "model_name": "Llama3",
+        "model": models.Llama_3,
+        "model_name": "Llama_3",
         "language": "EN",
         "health_type": "MH",
         "diagnoses": diagnoses.MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     },
-    # Llama3, ES, MH
+    # Llama_3, ES, MH
     {
-        "model": models.Llama3,
-        "model_name": "Llama3",
+        "model": models.Llama_3,
+        "model_name": "Llama_3",
         "language": "ES",
         "health_type": "MH",
         "diagnoses": diagnoses.MH_diagnoses_ES,
         "templates": prompts_HAPA.templates_ES
     },
+    # Mistral, EN, MH
+    {
+        "model": models.Mistral,
+        "model_name": "Mistral",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # Mistral, ES, MH
+    {
+        "model": models.Mistral,
+        "model_name": "Mistral",
+        "language": "ES",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_ES,
+        "templates": prompts_HAPA.templates_ES
+    },
+    # # DeepSeek, EN, MH
+    # {
+    #     "model": models.DeepSeekR1,
+    #     "model_name": "DeepSeekR1",
+    #     "language": "EN",
+    #     "health_type": "MH",
+    #     "diagnoses": diagnoses.MH_diagnoses_EN,
+    #     "templates": prompts_HAPA.templates_EN
+    # },
+    # # DeepSeek, ES, MH
+    # {
+    #     "model": models.DeepSeekR1,
+    #     "model_name": "DeepSeekR1",
+    #     "language": "ES",
+    #     "health_type": "MH",
+    #     "diagnoses": diagnoses.MH_diagnoses_ES,
+    #     "templates": prompts_HAPA.templates_ES
+    # },
+    # Gemma_3, EN, MH
+    {
+        "model": models.Gemma_3,
+        "model_name": "Gemma_3",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # Gemma_3, ES, MH
+    {
+        "model": models.Gemma_3,
+        "model_name": "Gemma_3",
+        "language": "ES",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_ES,
+        "templates": prompts_HAPA.templates_ES
+    },
+    # # Qwen_2_5, EN, MH
+    # {
+    #     "model": models.Qwen_2_5,
+    #     "model_name": "Qwen_2_5",
+    #     "language": "EN",
+    #     "health_type": "MH",
+    #     "diagnoses": diagnoses.MH_diagnoses_EN,
+    #     "templates": prompts_HAPA.templates_EN
+    # },
+    # # Qwen_2_5, ES, MH
+    # {
+    #     "model": models.Qwen_2_5,
+    #     "model_name": "Qwen_2_5",
+    #     "language": "ES",
+    #     "health_type": "MH",
+    #     "diagnoses": diagnoses.MH_diagnoses_ES,
+    #     "templates": prompts_HAPA.templates_ES
+    # },
     # Salamandra, ES, MH
     {
         "model": models.Salamandra,
