@@ -39,24 +39,24 @@ experiments = [
         "diagnoses": diagnoses.MH_diagnoses_ES,
         "templates": prompts_HAPA.templates_ES
     },
-    # # DeepSeek, EN, MH
-    # {
-    #     "model": models.DeepSeekR1,
-    #     "model_name": "DeepSeekR1",
-    #     "language": "EN",
-    #     "health_type": "MH",
-    #     "diagnoses": diagnoses.MH_diagnoses_EN,
-    #     "templates": prompts_HAPA.templates_EN
-    # },
-    # # DeepSeek, ES, MH
-    # {
-    #     "model": models.DeepSeekR1,
-    #     "model_name": "DeepSeekR1",
-    #     "language": "ES",
-    #     "health_type": "MH",
-    #     "diagnoses": diagnoses.MH_diagnoses_ES,
-    #     "templates": prompts_HAPA.templates_ES
-    # },
+    # DeepSeek, EN, MH
+    {
+        "model": models.DeepSeek,
+        "model_name": "DeepSeek",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # DeepSeek, ES, MH
+    {
+        "model": models.DeepSeek,
+        "model_name": "DeepSeek",
+        "language": "ES",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_ES,
+        "templates": prompts_HAPA.templates_ES
+    },
     # Gemma_3, EN, MH
     {
         "model": models.Gemma_3,
@@ -75,24 +75,24 @@ experiments = [
         "diagnoses": diagnoses.MH_diagnoses_ES,
         "templates": prompts_HAPA.templates_ES
     },
-    # # Qwen_2_5, EN, MH
-    # {
-    #     "model": models.Qwen_2_5,
-    #     "model_name": "Qwen_2_5",
-    #     "language": "EN",
-    #     "health_type": "MH",
-    #     "diagnoses": diagnoses.MH_diagnoses_EN,
-    #     "templates": prompts_HAPA.templates_EN
-    # },
-    # # Qwen_2_5, ES, MH
-    # {
-    #     "model": models.Qwen_2_5,
-    #     "model_name": "Qwen_2_5",
-    #     "language": "ES",
-    #     "health_type": "MH",
-    #     "diagnoses": diagnoses.MH_diagnoses_ES,
-    #     "templates": prompts_HAPA.templates_ES
-    # },
+    # Qwen_2_5, EN, MH
+    {
+        "model": models.Qwen_2_5,
+        "model_name": "Qwen_2_5",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # Qwen_2_5, ES, MH
+    {
+        "model": models.Qwen_2_5,
+        "model_name": "Qwen_2_5",
+        "language": "ES",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_ES,
+        "templates": prompts_HAPA.templates_ES
+    },
     # Salamandra, ES, MH
     {
         "model": models.Salamandra,
