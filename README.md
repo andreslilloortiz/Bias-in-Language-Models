@@ -1,4 +1,4 @@
-# Gender Bias in Language Models for Mental Health Applications
+# Gender Bias in Mental Health Language Models
 
 This repository contains the code and data for a comparative analysis of gender biases in Masked Language Models (MLMs) and Generative Large Language Models (LLMs) applied to the mental health domain. The study evaluates models in both English and Spanish across different clinical phases (based on the HAPA model).
 
