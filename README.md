@@ -1,6 +1,6 @@
 # Gender Bias in Mental Health Language Models
 
-This repository contains the code and data for a comparative analysis of gender biases in Masked Language Models (MLMs) and Generative Large Language Models (LLMs) applied to the mental health domain. The study evaluates models in both English and Spanish across different clinical phases (based on the HAPA model).
+This repository contains the code and data for an analysis of gender biases in Masked Language Models (MLMs) and Generative Large Language Models (LLMs) applied to the mental health domain. The study evaluates models in both English and Spanish across different clinical phases (based on the HAPA model) and implements mitigation techniques to ensure its safe use in clinical practice.
 
 ## Directory Structure
 
@@ -15,11 +15,11 @@ Evaluates gender token probability (mask filling) in general and clinical MLMs (
 
 ### 2. `LLMs bias detection/`
 
-Evaluates zero-shot responses from LLMs using an LLM-as-a-Judge system.
+Evaluates zero-shot responses from general and clinical LLMs using an LLM-as-a-Judge system.
 
 * **`analysis/`**: Notebooks and heatmaps showing gender disparity.
 * **`results/`**: CSVs with raw text and cleaned predictions.
-* **`src/`**: Source code for generation and LLM-as-a-Judge classification. Run with `python main.py`.
+* **`src/`**: Source code for the LLM pipeline. Run with `python main.py`.
 
 ---
 
