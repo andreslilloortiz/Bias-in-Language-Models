@@ -23,7 +23,11 @@ Evaluates zero-shot responses from general and clinical LLMs using an LLM-as-a-J
 
 ### 3. `MLMs bias mitigation/`
 
-Implements bias correction through fine-tuning. Contains the *gender scrubbing* scripts to neutralize text, the processed CSV training datasets, and the Jupyter notebooks for retraining the MLMs.
+Corrects observed gender biases through model fine-tuning using a gender scrubbing strategy.
+
+* **`gender-scrubbing/`**: Source code for neutralizing the training data.
+* **`selfharm datasets/`**: Original self harm clinical CSVs and resulting neutralized versions.
+* **`fine-tuning/`**: Jupyter notebooks for retraining the base model.
 
 ---
 

@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd # type: ignore
 import re
 import os
 
@@ -109,10 +109,10 @@ def main():
 
     # List of datasets to process
     files_to_process = [
-        'selfharm/selfharm_1.csv',
-        'selfharm/selfharm_2.csv',
-        'selfharm/selfharm_augmented.csv',
-        'selfharm/selfharm_augmented2.csv'
+        '../selfharm datasets/selfharm_1.csv',
+        '../selfharm datasets/selfharm_2.csv',
+        '../selfharm datasets/selfharm_augmented.csv',
+        '../selfharm datasets/selfharm_augmented2.csv'
     ]
 
     # Initialize the regex engine
