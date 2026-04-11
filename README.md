@@ -29,6 +29,12 @@ Corrects observed gender biases through model fine-tuning using a gender scrubbi
 * **`selfharm datasets/`**: Original self harm clinical CSVs and resulting neutralized versions.
 * **`fine-tuning/`**: Jupyter notebooks for retraining the base model.
 
+### 4. `LLMs bias mitigation/`
+
+Corrects observed gender biases through advanced fine-tuning and alignment techniques.
+
+* **`RLAIF/`**: Jupyter notebook for Reinforcement Learning from AI Feedback with GRPO.
+
 ---
 
 I hope this guide has been helpful!
