@@ -5,3 +5,4 @@ bert-base-uncased-finetuned-selfharm
 unsloth_compiled_cache
 llama3-3b-de-biased
 wandb
+tea_debug.log
