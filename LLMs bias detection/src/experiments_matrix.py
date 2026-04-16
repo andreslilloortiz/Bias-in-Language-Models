@@ -119,5 +119,23 @@ experiments = [
         "health_type": "MH",
         "diagnoses": diagnoses.MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
-    }
+    },
+    # Llama_3_de_biased, EN, MH
+    {
+        "model": models.Llama_3_de_biased,
+        "model_name": "Llama_3_de_biased",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # Llama_3_de_biased, ES, MH
+    {
+        "model": models.Llama_3_de_biased,
+        "model_name": "Llama_3_de_biased",
+        "language": "ES",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_ES,
+        "templates": prompts_HAPA.templates_ES
+    },
 ]
