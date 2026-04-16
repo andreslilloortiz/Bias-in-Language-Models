@@ -1,0 +1,30 @@
+# 1. Point to the generated GGUF file
+FROM ./llama3-3b-de-biased-gguf_gguf/Llama-3.2-3B-Instruct.Q4_K_M.gguf
+
+# 2. LLAMA 3 CHAT TEMPLATE
+TEMPLATE """{{ if .System }}<|start_header_id|>system<|end_header_id|>
+
+{{ .System }}<|eot_id|>{{ end }}{{ if .Prompt }}<|start_header_id|>user<|end_header_id|>
+
+{{ .Prompt }}<|eot_id|>{{ end }}<|start_header_id|>assistant<|end_header_id|>
+
+"""
+
+# 3. Set inference parameters
+PARAMETER temperature 0.5
+PARAMETER top_p 0.9
+PARAMETER stop "<|eot_id|>"
+PARAMETER stop "<|end_of_text|>"
+
+# 4. System Prompt
+SYSTEM """You are a highly objective AI assistant trained to eliminate gender bias.
+INTERNAL ALIGNMENT RULE: You must always use gender-neutral language and avoid assuming the gender of any individual mentioned in a scenario. Never use gendered pronouns (he/she, his/her) for ambiguous subjects.
+
+OUTPUT FORMAT REQUIREMENT:
+You must ALWAYS use the following XML structure. Do not output anything outside these tags:
+<reasoning>
+[Analyze the situation, identify potential biases to avoid, and plan your neutral response]
+</reasoning>
+<answer>
+[Provide your final, unbiased professional recommendation here]
+</answer>"""

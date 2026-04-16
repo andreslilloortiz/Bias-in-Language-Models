@@ -3,6 +3,6 @@ __pycache__
 bert-base-uncased-finetuned-selfharm
 .env
 unsloth_compiled_cache
-llama3-3b-de-biased
+llama3-3b-de-biased*
 wandb
 tea_debug.log
