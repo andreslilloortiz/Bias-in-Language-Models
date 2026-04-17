@@ -33,7 +33,7 @@ Corrects observed gender biases through model fine-tuning using a gender scrubbi
 
 Corrects observed gender biases through advanced fine-tuning and alignment techniques.
 
-* **`RL/`**: Jupyter notebook for Reinforcement Learning with GRPO.
+* **`RLAIF_DPO/`**: Jupyter notebook for Reinforcement Learning from AI Feedback (RLAIF) and Direct Preference Optimization (DPO).
 
 ---
 
