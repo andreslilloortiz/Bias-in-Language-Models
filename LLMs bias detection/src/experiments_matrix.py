@@ -137,5 +137,14 @@ experiments = [
         "health_type": "MH",
         "diagnoses": diagnoses.MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
+    },
+    # Llama_3_3b_SFT, EN, MH
+    {
+        "model": models.Llama_3_3b_SFT,
+        "model_name": "Llama_3_3b_SFT",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
     }
 ]
