@@ -120,10 +120,19 @@ experiments = [
         "diagnoses": diagnoses.MH_diagnoses_EN,
         "templates": prompts_HAPA.templates_EN
     },
-    # Llama_3_de_biased, EN, MH
+    # Llama_3_3b
     {
-        "model": models.Llama_3_de_biased,
-        "model_name": "Llama_3_de_biased",
+        "model": models.Llama_3_3b,
+        "model_name": "Llama_3_3b",
+        "language": "EN",
+        "health_type": "MH",
+        "diagnoses": diagnoses.MH_diagnoses_EN,
+        "templates": prompts_HAPA.templates_EN
+    },
+    # Llama_3_3b_RLAIF_DPO, EN, MH
+    {
+        "model": models.Llama_3_3b_RLAIF_DPO,
+        "model_name": "Llama_3_3b_RLAIF_DPO",
         "language": "EN",
         "health_type": "MH",
         "diagnoses": diagnoses.MH_diagnoses_EN,
