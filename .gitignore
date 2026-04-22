@@ -9,3 +9,5 @@ tea_debug.log
 out-dpo-train
 model-gguf*
 andreslilloortiz
+out-sft-train
+llama-3.2-3b-sft-debiased
